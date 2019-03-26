@@ -1,10 +1,15 @@
 .card {
-    width: 350px!important;
+    width: 500px!important;
     margin: auto;
 }
 
 .text-input {
     width: 80%;
+}
+
+.uploadButtonStyle {
+	align-self: flex-start;
+	position: relative;
 }
 
 .file {
@@ -16,3 +21,9 @@
 	height: 100%;
 	z-index: 1;
 }
+
+.profileButton {
+	position: absolute;
+	z-index: 9;
+	cursor: move;
+  }

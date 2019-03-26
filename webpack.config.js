@@ -55,7 +55,7 @@ module.exports = () => {
       inline: true,
       port: 8080,
       proxy: {
-        "/_events/v1/api/**": {
+        "/_events/v1/**": {
           target: {
             host: process.env.APP_HOST || "127.0.0.1",
             protocol: process.env.APP_PROTOCOL || "http",

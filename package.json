@@ -14,7 +14,6 @@
     "license": "MIT",
     "dependencies": {
         "axios": "^0.18.0",
-        "babel-plugin-react-css-modules": "^5.2.3",
         "dotenv": "^7.0.0",
         "react": "^16.8.4",
         "react-dom": "^16.8.4",

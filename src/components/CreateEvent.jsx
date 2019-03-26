@@ -30,7 +30,7 @@ const initialState = {
 export default props => {
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
-        <Card style={{ width: "500px", margin: "auto" }} /* theme={styles} */ styleName="card" raised>
+        <Card className="card" raised>
             <CardTitle
                 avatar="https://placeimg.com/80/80/animals"
                 title="Avatar style title"
@@ -39,7 +39,10 @@ export default props => {
             <Input type="text" name="title" label="Title" value={state.title} onChange={title => dispatch({ type: "TITLE", payload: { title } })} />
             <DatePicker label='Event date' sundayFirstDayOfWeek onChange={date => dispatch({ type: "DATE", payload: { date } })} value={state.date} />
             {/* <TimePicker label='Event time' onChange={time => setTime(time)} value={time} /> */}
-            <Input type="file" styleName="file" icon={<FontIcon value="icon_upload" />} name="image" accept="image/*" label="Title" value={state.image} onChange={image => dispatch({ type: "IMAGE", payload: { image } })} />
+            <div className="uploadButtonStyle">
+                <Input type="file" className="file" icon="cloud_upload" name="image" accept="image/*" label="Title" value={state.image} onChange={image => dispatch({ type: "IMAGE", payload: { image } })} />
+                <Button icon="cloud_upload" floating mini accent />
+            </div>
             {
                 state.image && <CardMedia
                     aspectRatio="wide"
